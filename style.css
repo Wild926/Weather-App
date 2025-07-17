@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+}
+
+.top-section {
+    background: linear-gradient(135deg, #4CE3E6, #FFE0A2);
+    width: 80%;
+    max-width: 470px;
+    text-align: center;
+    margin: 100px auto 0;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.input-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-field input {
+    border: none;
+    border-radius: 30px;
+    flex: 1;
+    background: #ecfdfb;
+    margin-right: 15px;
+    padding-left: 25px;
+    height: 60px;
+    font-size: 15px;
+}
+
+.input-field button {
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #ecfdfb;
+}
+
+.input-field button img {
+    width: 20px;
+}
+  
