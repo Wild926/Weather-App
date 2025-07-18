@@ -10,12 +10,12 @@ body {
 }
 
 .top-section {
-    background: linear-gradient(135deg, #4CE3E6, #FFE0A2);
+    background: linear-gradient(135deg, #38f5b6, #3821a0);
     width: 80%;
     max-width: 470px;
     text-align: center;
     margin: 100px auto 0;
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     border-radius: 20px;
 }
 
@@ -49,4 +49,48 @@ body {
 .input-field button img {
     width: 20px;
 }
-  
+
+.weather-icon {
+    width: 180px;
+}
+
+.temp {
+    color: aliceblue;
+    font-size: 60px;
+    font-weight: 500;
+    width: 100%;
+    
+}
+
+.city {
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 500;
+    width: 100%;
+    
+}
+
+.lower-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.column img {
+    width: 35px;
+    margin: 10px;
+}
+
+.column p {
+    color: #ecfdfb;
+    font-size: 15px;
+    padding: 1px;
+}
