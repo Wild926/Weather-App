@@ -3,9 +3,17 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-    let data = await response.json();
+    const data = await response.json();
 
-    console.log(data);
+    //console.log("city entered", city);
+
+    if (response.status === 404 || !data.main) {
+       document.querySelector(".city").innerHTML = "City not found";
+       document.querySelector(".temp").innerHTML = "--";
+       document.querySelector(".humidity").innerHTML = "--";
+       document.querySelector(".wind").innerHTML = "--";
+       return;
+    }
 
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
@@ -14,3 +22,25 @@ async function checkWeather(city) {
 }
 
 checkWeather()
+
+const searchBtn = document.getElementById("search-btn")
+const cityInput = document.getElementById("city-input")
+
+searchBtn.addEventListener("click", ()=> {
+    const city = cityInput.value.trim();
+    if(city !==""){
+        checkWeather(city);
+        cityInput.value = "";
+        //console.log("city entered", city);
+    }
+});
+
+cityInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+       const city = cityInput.value.trim();
+       if(city !==""){
+          checkWeather(city);
+          cityInput.value = "";
+    }
+  }
+});
